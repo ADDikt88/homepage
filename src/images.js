@@ -8,9 +8,9 @@ function processIMG(imgFile, height) {
   const img = document.createElement("img");
   img.src = imgFile;
   img.alt = "image";
-  img.style.objectFit = "fill";
+  img.style.objectFit = "cover";
   img.style.height = height;
-  img.style.width = "100%";
+  img.style.width = height;
   return img;
 }
 
