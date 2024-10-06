@@ -5,4 +5,22 @@
 
 body {
   background-color: aliceblue;
+  font-family: "Roboto", sans-serif;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+header {
+  background-image: url("./images/pexels-punttim-139762.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+  width: 100%;
+}
+
+.header-title {
+  font-size: 4rem;
+  color: aliceblue;
 }
