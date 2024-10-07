@@ -1,4 +1,8 @@
-import { profileImg, skydomeBackgroundImg } from "./images.js";
+import {
+  profileImg,
+  skydomeBackgroundImg,
+  snowyBackgroundImg,
+} from "./images.js";
 import {
   githubIcon,
   //   linkedinIcon,
@@ -15,5 +19,8 @@ function mainpage() {
 
   const aboutMeLeft = document.querySelector(".about-me-left");
   aboutMeLeft.appendChild(profileImg);
+
+  const footerRight = document.querySelector(".footer-right");
+  footerRight.appendChild(snowyBackgroundImg);
 }
 export { mainpage };
