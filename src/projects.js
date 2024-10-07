@@ -5,13 +5,17 @@ import {
 } from "./images.js";
 
 let projectList = [];
+const testDescription =
+  "Lorem ipsum odor amet, consectetuer adipiscing elit. Ligula \
+            tristique faucibus nec mattis velit? Ultrices curae pellentesque \
+            primis dui enim ut nisi id ipsum.";
 
 projectList.push(
   createProjectCard(
     skydomeBackgroundImg,
     "Snowy Project",
     "test",
-    "This is a test description"
+    testDescription
   )
 );
 
