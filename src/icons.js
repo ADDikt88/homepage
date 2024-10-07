@@ -4,17 +4,13 @@ import emailSvg from "./icons/email-outline.svg";
 import phoneSvg from "./icons/phone-outline.svg";
 import linkSvg from "./icons/icons8-link.svg";
 
-function processSVG(svgFile, height = 100) {
+function processSVG(svgFile, altText, height = 100) {
   const svgIcon = document.createElement("img");
   svgIcon.src = svgFile;
-  svgIcon.height = height;
+  svgIcon.alt = altText;
+  svgIcon.style.height = height;
+  svgIcon.style.width = height;
   return svgIcon;
 }
 
-const githubIcon = processSVG(githubSvg);
-const linkedinIcon = processSVG(linkedinSvg);
-const emailIcon = processSVG(emailSvg);
-const phoneIcon = processSVG(phoneSvg);
-const linkIcon = processSVG(linkSvg);
-
-export { githubIcon, linkedinIcon, emailIcon, phoneIcon, linkIcon };
+export { processSVG, githubSvg, linkedinSvg, emailSvg, phoneSvg, linkSvg };

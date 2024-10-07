@@ -4,6 +4,15 @@ import {
   snowyBackgroundImg,
 } from "./images.js";
 
+import {
+  processSVG,
+  githubSvg,
+  linkedinSvg,
+  emailSvg,
+  phoneSvg,
+  linkSvg,
+} from "./icons.js";
+
 let projectList = [];
 const testDescription =
   "Lorem ipsum odor amet, consectetuer adipiscing elit. Ligula \
@@ -83,7 +92,9 @@ function createProjectCard(screenshot, title, link, description) {
 
   const projectIcons = document.createElement("div");
   projectIcons.classList = "project-icons";
-  projectIcons.textContent = "project-icons";
+
+  projectIcons.appendChild(processSVG(githubSvg, "Github Icon", "25px"));
+  projectIcons.appendChild(processSVG(linkSvg, "Link Icon", "25px"));
 
   projectTitleBar.appendChild(projectTitle);
   projectTitleBar.appendChild(projectIcons);
