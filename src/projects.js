@@ -1,7 +1,12 @@
 import {
+  battleship_ssImg,
+  dashboard_ssImg,
   profileImg,
   skydomeBackgroundImg,
   snowyBackgroundImg,
+  todo_ssImg,
+  tt_ssImg,
+  weather_ssImg,
 } from "./images.js";
 
 import {
@@ -20,56 +25,31 @@ const testDescription =
             primis dui enim ut nisi id ipsum.";
 
 projectList.push(
+  createProjectCard(battleship_ssImg, "Battleship", "test", testDescription)
+);
+
+projectList.push(
+  createProjectCard(todo_ssImg, "To-Do List", "test", testDescription)
+);
+
+projectList.push(
+  createProjectCard(dashboard_ssImg, "Dashboard", "test", testDescription)
+);
+
+projectList.push(
+  createProjectCard(weather_ssImg, "Weather", "test", testDescription)
+);
+
+projectList.push(
+  createProjectCard(tt_ssImg, "Tic-Tac-Toe", "test", testDescription)
+);
+
+projectList.push(
   createProjectCard(
     skydomeBackgroundImg,
-    "Snowy Project",
+    "Baseball Stats",
     "test",
     testDescription
-  )
-);
-
-projectList.push(
-  createProjectCard(
-    skydomeBackgroundImg,
-    "Snowy Project",
-    "test",
-    "This is a test description"
-  )
-);
-
-projectList.push(
-  createProjectCard(
-    skydomeBackgroundImg,
-    "Snowy Project",
-    "test",
-    "This is a test description"
-  )
-);
-
-projectList.push(
-  createProjectCard(
-    skydomeBackgroundImg,
-    "Snowy Project",
-    "test",
-    "This is a test description"
-  )
-);
-
-projectList.push(
-  createProjectCard(
-    skydomeBackgroundImg,
-    "Snowy Project",
-    "test",
-    "This is a test description"
-  )
-);
-
-projectList.push(
-  createProjectCard(
-    skydomeBackgroundImg,
-    "Snowy Project",
-    "test",
-    "This is a test description"
   )
 );
 //projectList.push(projectCard2);
