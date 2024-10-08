@@ -6,6 +6,7 @@
 html,
 body {
   height: 100%;
+  min-width: 320px;
 }
 
 body {
@@ -38,10 +39,28 @@ nav {
 
 .logo {
   margin-left: 50px;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 .nav-bar {
   margin: auto;
   margin-right: 50px;
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-bar a:link {
+  color: aliceblue;
+}
+
+.nav-bar a:visited {
+  color: rgb(128, 166, 199);
+}
+
+.nav-bar a:hover,
+.nav-bar a:active {
+  color: rgb(184, 209, 231);
 }
 
 .about {
@@ -290,7 +309,16 @@ footer {
   main,
   footer {
     max-width: 700px;
-    min-width: 320px;
+  }
+
+  .logo {
+    display: none;
+  }
+  .nav-bar {
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    gap: 3rem;
   }
 
   .about {

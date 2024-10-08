@@ -25,36 +25,67 @@ const testDescription =
             primis dui enim ut nisi id ipsum.";
 
 projectList.push(
-  createProjectCard(battleship_ssImg, "Battleship", "test", testDescription)
+  createProjectCard(
+    battleship_ssImg,
+    "Battleship",
+    "https://github.com/ADDikt88/battleship",
+    "https://addikt88.github.io/battleship/",
+    testDescription
+  )
 );
 
 projectList.push(
-  createProjectCard(todo_ssImg, "To-Do List", "test", testDescription)
+  createProjectCard(
+    todo_ssImg,
+    "To-Do List",
+    "https://github.com/ADDikt88/todo-list",
+    "https://addikt88.github.io/todo-list/",
+    testDescription
+  )
 );
 
 projectList.push(
-  createProjectCard(dashboard_ssImg, "Dashboard", "test", testDescription)
+  createProjectCard(
+    dashboard_ssImg,
+    "Dashboard",
+    "https://github.com/ADDikt88/dashboard",
+    "https://addikt88.github.io/dashboard/",
+    testDescription
+  )
 );
 
 projectList.push(
-  createProjectCard(weather_ssImg, "Weather", "test", testDescription)
+  createProjectCard(
+    weather_ssImg,
+    "Weather",
+    "https://github.com/ADDikt88/weather-app",
+    "https://addikt88.github.io/weather-app/",
+    testDescription
+  )
 );
 
 projectList.push(
-  createProjectCard(tt_ssImg, "Tic-Tac-Toe", "test", testDescription)
+  createProjectCard(
+    tt_ssImg,
+    "Tic-Tac-Toe",
+    "https://github.com/ADDikt88/tictactoe",
+    "https://addikt88.github.io/tictactoe/",
+    testDescription
+  )
 );
 
 projectList.push(
   createProjectCard(
     skydomeBackgroundImg,
     "Baseball Stats",
-    "test",
+    "#",
+    "#",
     testDescription
   )
 );
 //projectList.push(projectCard2);
 
-function createProjectCard(screenshot, title, link, description) {
+function createProjectCard(screenshot, title, link, livelink, description) {
   const projectCard = document.createElement("div");
   projectCard.classList = "project-card";
 
@@ -73,8 +104,23 @@ function createProjectCard(screenshot, title, link, description) {
   const projectIcons = document.createElement("div");
   projectIcons.classList = "project-icons";
 
-  projectIcons.appendChild(processSVG(githubSvg, "Github Icon", "25px"));
-  projectIcons.appendChild(processSVG(linkSvg, "Link Icon", "25px"));
+  const projectLink = document.createElement("a");
+  if (link !== "#") {
+    projectLink.href = link;
+    projectLink.target = "_blank";
+  }
+  projectLink.appendChild(processSVG(githubSvg, "Github Icon", "25px"));
+  projectIcons.appendChild(projectLink);
+
+  const projectLiveLink = document.createElement("a");
+
+  if (livelink !== "#") {
+    projectLiveLink.href = livelink;
+    projectLiveLink.target = "_blank";
+  }
+
+  projectLiveLink.appendChild(processSVG(linkSvg, "Link Icon", "25px"));
+  projectIcons.appendChild(projectLiveLink);
 
   projectTitleBar.appendChild(projectTitle);
   projectTitleBar.appendChild(projectIcons);

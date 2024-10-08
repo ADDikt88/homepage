@@ -15,8 +15,18 @@ import { projectList } from "./projects.js";
 
 function mainpage() {
   const aboutMeIcons = document.querySelector(".about-me-icons");
-  aboutMeIcons.appendChild(processSVG(githubSvg, "Github Icon", "35px"));
-  aboutMeIcons.appendChild(processSVG(linkedinSvg, "LinkedIn Icon", "35px"));
+
+  const githubLink = document.createElement("a");
+  githubLink.href = "https://github.com/ADDikt88";
+  githubLink.target = "_blank";
+  githubLink.appendChild(processSVG(githubSvg, "Github Icon", "35px"));
+  aboutMeIcons.appendChild(githubLink);
+
+  const linkedinLink = document.createElement("a");
+  linkedinLink.href = "https://www.linkedin.com/";
+  linkedinLink.target = "_blank";
+  linkedinLink.appendChild(processSVG(linkedinSvg, "LinkedIn Icon", "35px"));
+  aboutMeIcons.appendChild(linkedinLink);
 
   const aboutMeLeft = document.querySelector(".about-me-left");
   aboutMeLeft.appendChild(profileImg);
@@ -44,8 +54,18 @@ function mainpage() {
   emailContainer.appendChild(emailAddress);
 
   const contactIcons = document.querySelector(".contact-me-icons");
-  contactIcons.appendChild(processSVG(githubSvg, "Github Icon", "35px"));
-  contactIcons.appendChild(processSVG(linkedinSvg, "LinkedIn Icon", "35px"));
+
+  const githubLinkC = document.createElement("a");
+  githubLinkC.href = "https://github.com/ADDikt88";
+  githubLinkC.target = "_blank";
+  githubLinkC.appendChild(processSVG(githubSvg, "Github Icon", "35px"));
+  contactIcons.appendChild(githubLinkC);
+
+  const linkedinLinkC = document.createElement("a");
+  linkedinLinkC.href = "https://www.linkedin.com/";
+  linkedinLinkC.target = "_blank";
+  linkedinLinkC.appendChild(processSVG(linkedinSvg, "LinkedIn Icon", "35px"));
+  contactIcons.appendChild(linkedinLinkC);
 
   const footerRight = document.querySelector(".footer-right");
   footerRight.appendChild(snowyBackgroundImg);
